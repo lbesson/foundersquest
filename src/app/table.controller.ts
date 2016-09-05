@@ -8,12 +8,13 @@ export class TableController {
   private searchText: string = '';
   /* tslint:enable:no-unused-variable */
 
-  public sort(header: string) {
+  public predicate = (input: IRow): string => {
+    return input[this.sortType];
+  }
+
+  public sort(header: string): void {
     this.sortType = header;
     this.sortReverse = !this.sortReverse;
   }
 
-  public predicate(input: IRow) {
-  	return input[this.sortType];
-  }
 }
