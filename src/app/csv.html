@@ -25,7 +25,7 @@
     </thead>
     <tbody>
       <tr ng-repeat="row in $ctrl.data">
-        <td ng-repeat="(header, value) in row">{{value}}</td>
+        <td ng-repeat="(header, value) in row" ng-bind-html="value | richContent"></td>
         <td><input type="checkbox" ng-model="row.$$visible"></td>
       </tr>
     </tbody>

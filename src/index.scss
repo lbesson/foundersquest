@@ -9,7 +9,6 @@ body, h1, h2, h3 {
 }
 
 a {
-  color: white;
   text-decoration: none;
 
   &:hover {
@@ -37,6 +36,10 @@ a {
   flex: 1;
   font-size: 1.5rem;
   margin: 1rem;
+
+  a {
+    color: white;
+  }
 }
 .header-date {
   flex: 1;

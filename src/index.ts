@@ -2,6 +2,8 @@
 
 import * as angular from 'angular';
 
+import './utils/utils';
+
 import {main} from './app/main';
 import {header} from './app/header';
 import {title} from './app/title';
@@ -11,7 +13,7 @@ import {csv} from './app/csv';
 import './index.scss';
 
 angular
-  .module('app', [])
+  .module('app', ['utils'])
   .component('app', main)
   .component('fountainHeader', header)
   .component('fountainTitle', title)
