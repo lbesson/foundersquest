@@ -1,19 +1,22 @@
-<table ng-show="$ctrl.data.length">
-  <thead>
-    <tr>
-      <th ng-repeat="(header, value) in $ctrl.data[0]">
-        <a href="#" ng-click="$ctrl.sort(header)">
-          {{header}}
-          <span ng-show="$ctrl.sortType == header">todo</span>
-        </a>
-      </th>
-      <th>Show</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="row in $ctrl.data | orderBy:$ctrl.sortType:$ctrl.sortReverse">
-      <td ng-repeat="(header, value) in row" ng-bind-html="value | richContent"></td>
-      <td><input type="checkbox" ng-model="row.$$visible"></td>
-    </tr>
-  </tbody>
-</table>
+<div ng-show="$ctrl.data.length">
+  <input type="text" placeholder="Filter" ng-model="$ctrl.searchText">
+  <table>
+    <thead>
+      <tr>
+        <th ng-repeat="(header, value) in $ctrl.data[0]">
+          <a href="#" ng-click="$ctrl.sort(header)">
+            {{header}}
+            <span ng-show="$ctrl.sortType == header">todo</span>
+          </a>
+        </th>
+        <th>Show</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="row in $ctrl.data | orderBy:$ctrl.sortType:$ctrl.sortReverse | filter:$ctrl.searchText">
+        <td ng-repeat="(header, value) in row" ng-bind-html="value | richContent"></td>
+        <td><input type="checkbox" ng-model="row.$$visible"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
