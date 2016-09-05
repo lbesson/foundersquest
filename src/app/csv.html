@@ -16,5 +16,19 @@
     <button ng-click="$ctrl.parseCsv()" ng-disabled="!$ctrl.input.length">Parse</button>
   </div>
 
-<div>{{$ctrl.data}}</div>
+<table ng-show="$ctrl.data.length">
+  <thead>
+    <tr>
+      <th ng-repeat="(header, value) in $ctrl.data[0]">{{header}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in $ctrl.data">
+      <td ng-repeat="(header, value) in row">
+        {{value}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 </div>
