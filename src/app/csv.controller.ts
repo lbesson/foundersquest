@@ -6,8 +6,6 @@ interface IRow {
 
 export class CsvController {
 
-  static $inject = ['$scope'];
-
   private delimiter: string = '';
   private input: string;
   private data: Array<IRow>;

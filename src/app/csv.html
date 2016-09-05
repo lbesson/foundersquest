@@ -16,19 +16,4 @@
     <button ng-click="$ctrl.parseCsv()" ng-disabled="!$ctrl.input.length">Parse</button>
   </div>
 
-  <table ng-show="$ctrl.data.length">
-    <thead>
-      <tr>
-        <th ng-repeat="(header, value) in $ctrl.data[0]">{{header}}</th>
-        <th>Show</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="row in $ctrl.data">
-        <td ng-repeat="(header, value) in row" ng-bind-html="value | richContent"></td>
-        <td><input type="checkbox" ng-model="row.$$visible"></td>
-      </tr>
-    </tbody>
-  </table>
-
 </div>

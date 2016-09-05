@@ -9,6 +9,7 @@ import {header} from './app/header';
 import {title} from './app/title';
 import {footer} from './app/footer';
 import {csv} from './app/csv';
+import {table} from './app/table';
 
 import './index.scss';
 
@@ -18,4 +19,5 @@ angular
   .component('fountainHeader', header)
   .component('fountainTitle', title)
   .component('fountainFooter', footer)
-  .component('csv', csv);
+  .component('csvInput', csv)
+  .component('startupsTable', table);
