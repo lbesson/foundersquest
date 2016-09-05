@@ -1,8 +1,5 @@
 import * as Papa from 'papaparse';
-
-interface IRow {
-  $$visible: boolean;
-}
+import {IRow} from '../interfaces/row';
 
 export class CsvController {
 
