@@ -1,6 +1,6 @@
 <div ng-show="$ctrl.data.length">
-  <input type="text" placeholder="Filter" ng-model="$ctrl.searchText">
-  <table>
+  <input class="form-control" type="text" placeholder="Filter" ng-model="$ctrl.searchText">
+  <table class="table table-striped">
     <thead>
       <tr>
         <th ng-repeat="(header, value) in $ctrl.data[0]">

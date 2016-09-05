@@ -6,14 +6,14 @@ interface IRow {
 
 export class CsvController {
 
-  private delimiter: string = '';
+  private delimiter: string = 'auto';
   private input: string;
   private data: Array<IRow>;
 
   public parseCsv(input: string) {
     const results = Papa.parse(this.input, {
       header: true,
-      delimiter: this.delimiter
+      delimiter: this.delimiter === 'auto' ? '' : this.delimiter
     });
 
     if (results.errors.length) {

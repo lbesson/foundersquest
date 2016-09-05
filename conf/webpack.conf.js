@@ -44,6 +44,16 @@ module.exports = {
         loaders: [
           'html'
         ]
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        // Limiting the size of the woff fonts breaks font-awesome ONLY for the extract text plugin
+        // loader: "url?limit=10000"
+        loader: 'url-loader',
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader',
       }
     ]
   },
@@ -71,7 +81,7 @@ module.exports = {
       '.ts'
     ]
   },
-  entry: `./${conf.path.src('index')}`,
+  entry: [ 'bootstrap-loader', `./${conf.path.src('index')}` ],
   ts: {
     configFileName: 'tsconfig.json'
   },

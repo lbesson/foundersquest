@@ -1,19 +1,18 @@
-<div>
-  Please paste your csv file here:
+<form>
+  
   <div>
-    <textarea ng-model="$ctrl.input"></textarea>
+    <textarea  id="input" class="form-control" rows="5" placeholder="Please write your csv input here" ng-model="$ctrl.input"></textarea>
   </div>
 
-  <div>
-    <label>Delimiter:
-      <select ng-model="$ctrl.delimiter">
-        <option value="">auto</option>
-        <option value=",">comma</option>
-        <option value=";">semicolon</option>
-        <option value="	">tab</option>
-      </select>
-    </label>
-    <button ng-click="$ctrl.parseCsv()" ng-disabled="!$ctrl.input.length">Parse</button>
+  <div class="form-group form-inline">
+    <label for="delimiter">Delimiter</label>
+    <select id="delimiter" class="form-control" ng-model="$ctrl.delimiter">
+      <option value="auto">auto</option>
+      <option value=",">comma</option>
+      <option value=";">semicolon</option>
+      <option value="	">tab</option>
+    </select>
+    <button class="btn btn-primary" ng-click="$ctrl.parseCsv()" ng-disabled="!$ctrl.input.length">Parse</button>
   </div>
 
-</div>
+</form>
