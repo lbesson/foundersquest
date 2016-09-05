@@ -6,6 +6,7 @@ import {main} from './app/main';
 import {header} from './app/header';
 import {title} from './app/title';
 import {footer} from './app/footer';
+import {csv} from './app/csv';
 
 import './index.scss';
 
@@ -14,4 +15,5 @@ angular
   .component('app', main)
   .component('fountainHeader', header)
   .component('fountainTitle', title)
-  .component('fountainFooter', footer);
+  .component('fountainFooter', footer)
+  .component('csv', csv);
