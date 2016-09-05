@@ -4,6 +4,6 @@ export const csv: angular.IComponentOptions = {
   template: require('./csv.html'),
   controller: CsvController,
   bindings: {
-    data: "="
+    data: '='
   }
 };
