@@ -29,7 +29,9 @@ export class TableController {
   }
 
   public setAddress = (): void => {
-    if (!this.addressType) return;
+    if (!this.addressType) {
+      return;
+    }
 
     for (let row of this.data) {
       row.$$position = row[this.addressType];
@@ -37,7 +39,9 @@ export class TableController {
   }
 
   public setCoordinates = (): void => {
-    if (!this.latitudeType || !this.longitudeType) return;
+    if (!this.latitudeType || !this.longitudeType) {
+      return;
+    }
 
     for (let row of this.data) {
       row.$$position = [parseFloat(row[this.latitudeType]), parseFloat(row[this.longitudeType])];

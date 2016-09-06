@@ -15,7 +15,9 @@ import {map} from './app/map';
 import './index.scss';
 
 angular
+  /* tslint:disable:no-var-requires */
   .module('app', ['utils', require('ngmap')])
+  /* tslint:enable:no-var-requires */
   .component('app', main)
   .component('fountainHeader', header)
   .component('fountainTitle', title)
