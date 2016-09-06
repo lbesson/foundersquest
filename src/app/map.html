@@ -2,7 +2,7 @@
   <ng-map center="41,-87" zoom="3" zoom-to-include-markers="true">
     <marker ng-repeat="marker in $ctrl.data | filter:{$$visible: true}"
             position="{{marker.$$position}}"
-            title="{{marker.$$title}}">
+            label="{{marker.$$label}}">
     </marker>
   </ng-map>
 </div>
