@@ -10,14 +10,16 @@ import {title} from './app/title';
 import {footer} from './app/footer';
 import {csv} from './app/csv';
 import {table} from './app/table';
+import {map} from './app/map';
 
 import './index.scss';
 
 angular
-  .module('app', ['utils'])
+  .module('app', ['utils', require('ngmap')])
   .component('app', main)
   .component('fountainHeader', header)
   .component('fountainTitle', title)
   .component('fountainFooter', footer)
   .component('csvInput', csv)
-  .component('startupsTable', table);
+  .component('startupsTable', table)
+  .component('startupsMap', map);

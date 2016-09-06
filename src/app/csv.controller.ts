@@ -22,6 +22,7 @@ export class CsvController {
     for (let row of results.data) {
       row.$$visible = true;
     }
+
     this.data = results.data;
   }
 

@@ -19,4 +19,32 @@
       </tr>
     </tbody>
   </table>
+  <div class="form-group form-inline">
+    <label for="label">Label</label>
+    <select id="label" class="form-control" ng-model="$ctrl.labelType" ng-change="$ctrl.setLabel()">
+      <option ng-repeat="(header, value) in $ctrl.data[0]" ng-value="header">{{header}}</option>
+    </select>
+
+    <label for="geolocation">Geolocation</label>
+    <select id="geolocation" class="form-control" ng-model="geolocation">
+      <option value="address">address</option>
+      <option value="coordinates">coordinates</option>
+    </select>
+    <span ng-show="geolocation =='address'">
+      <label for="address">Address</label>
+      <select id="label" class="form-control" ng-model="$ctrl.addressType" ng-change="$ctrl.setAddress()">
+        <option ng-repeat="(header, value) in $ctrl.data[0]" ng-value="header">{{header}}</option>
+      </select>
+    </span>
+    <span ng-show="geolocation =='coordinates'">
+      <label for="latitude">Latitude</label>
+      <select id="latitude" class="form-control" ng-model="$ctrl.latitudeType" ng-change="$ctrl.setCoordinates()">
+        <option ng-repeat="(header, value) in $ctrl.data[0]" ng-value="header">{{header}}</option>
+      </select>
+      <label for="longitude">Longitude</label>
+      <select id="longitude" class="form-control" ng-model="$ctrl.longitudeType" ng-change="$ctrl.setCoordinates()">
+        <option ng-repeat="(header, value) in $ctrl.data[0]" ng-value="header">{{header}}</option>
+      </select>
+    </span>
+  </div>
 </div>

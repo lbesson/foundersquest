@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/fa3374839690fe617b042e9742f08898ccd30660/ngmap/ngmap.d.ts",
+    "raw": "registry:dt/ngmap#0.0.0+20160829180832",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/fa3374839690fe617b042e9742f08898ccd30660/ngmap/ngmap.d.ts"
+  }
+}
